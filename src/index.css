@@ -1,0 +1,5 @@
+.appContainer {
+  display: flex;
+  height: 100vh;
+  font-family: arial, sans-serif;
+}
