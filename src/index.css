@@ -79,3 +79,72 @@
 .expenseTable tr:hover {
   background-color: #f2f2f2;
 }
+
+/* FOR TABLETS AND PHONES */
+@media (max-width: 768px) {
+  .appContainer {
+    flex-direction: column;
+    height: auto;
+  }
+  .sidebar {
+    width: 100%;
+    padding: 1rem;
+  }
+  .mainContent {
+    width: 100%;
+    padding: 1rem;
+  }
+  .expense-form input,
+  .expense-form button,
+  .search-bar input {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+  .expense-form button {
+    font-size: 1rem;
+  }
+}
+
+/*  FOR SMALLER SCREENS*/
+@media (max-width: 525px) {
+  .expense-table th,
+  .expense-table td {
+    font-size: 0.75rem;
+    padding: 0.4rem;
+  }
+
+  .search-bar label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .search-bar input {
+    font-size: 0.9rem;
+  }
+
+  .expense-form input {
+    font-size: 0.9rem;
+  }
+
+  .expense-form button {
+    font-size: 0.9rem;
+  }
+
+  .expense-table th,
+  .expense-table td {
+    font-size: 0.7rem;
+    padding: 0.3rem;
+  }
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .expense-table {
+    width: 1000px;
+    min-width: 600px;
+    border-collapse: collapse;
+  }
+}
