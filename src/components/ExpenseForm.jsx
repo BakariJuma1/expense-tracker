@@ -44,6 +44,13 @@ function ExpenseForm({ onAddExpense }) {
         required
       />
       <input
+        type="text"
+        placeholder=" Expense Category"
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+        required
+      />
+      <input
         type="number"
         placeholder="Enter Amount"
         value={amount}
