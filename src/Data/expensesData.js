@@ -1,7 +1,7 @@
 const expensesData = [
   {
     id: 1,
-    name: "Light Mshumo",
+    name: "Omena",
     description: "Wednesday’s lunch",
     category: "food",
     amount: 100,
@@ -9,7 +9,7 @@ const expensesData = [
   },
   {
     id: 2,
-    name: "NYC tokens",
+    name: "KPLC tokens",
     description: "power tokens",
     category: "utilities",
     amount: 2000,
