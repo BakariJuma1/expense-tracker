@@ -3,7 +3,9 @@ import ExpenseForm from "./components/ExpenseForm";
 import { useState } from "react";
 import SearchBar from "./components/SearchBar";
 import expensesData from "./Data/expensesData";
+
 function App() {
+  //state to store expenses
   const [expenses, setExpenses] = useState(expensesData);
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -15,6 +17,12 @@ function App() {
     setSearchTerm(term.toLowerCase()); //CONVERT TO LOWER CASE
   };
 
+  const deleteExpense = (idToDelete) => {
+    const updatedExpenses = expenses.filter(
+      (expense) => expense.id !== idToDelete
+    );
+    setExpenses(updatedExpenses);
+  };
   //FILTERED EXPENSES
   const filteredExpenses = expenses.filter((expense) => {
     return (
@@ -32,7 +40,10 @@ function App() {
       </aside>
       <main className="mainContent">
         <SearchBar onSearch={handleSearch} />
-        <ExpenseTable expenses={filteredExpenses} />
+        <ExpenseTable
+          expenses={filteredExpenses}
+          onDeleteExpenses={deleteExpense}
+        />
       </main>
     </div>
   );
